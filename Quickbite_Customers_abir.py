@@ -107,7 +107,7 @@ df.loc[(df.age < 16) | (df.age > 90), "age"] = np.nan
 
 
 
-# delivery_time_min: 275-500 min may be real failures -> FLAG for investigation, then CAP
+#  FLAG for investigation, then CAP
 
 df["extreme_delivery_flag"] = df.delivery_time_min > 180
 
@@ -224,7 +224,7 @@ df["customer_rating"] = df["customer_rating"].fillna(
 
 df["discount_used_pct"] = df["discount_used_pct"].fillna(df["discount_used_pct"].median())
 
-df["gender"] = df["gender"].fillna("Unknown")   # honest: don't invent a gender
+df["gender"] = df["gender"].fillna("Unknown")  
 
 
 
